@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stone Paper Scissors</title>
+    <link rel="stylesheet" href="stone_paper_scissors.css">
+    <script src="stone_paper_scissors.js" defer></script>
+</head>
+<body>
+    <h1>STONE PAPER SCISSORS</h1>
+
+    <button onclick="
+        let computerMove = pickComputerMove();
+        let user=document.querySelector('.js-userMove');
+        user.innerHTML='Stone';
+        result('stone',computerMove);"><img src="imgs/stone.png" alt="Stone">
+        </button>
+
+    <button onclick="
+        computerMove = pickComputerMove();
+        let user=document.querySelector('.js-userMove');
+        user.innerHTML='Paper';
+        result('paper', computerMove);">Paper</button>
+
+    <button onclick="
+        computerMove = pickComputerMove();
+        let user=document.querySelector('.js-userMove');
+        user.innerHTML='Scissors';
+        result('scissors',computerMove);">Scissors</button>
+
+    <button onclick = "resetScore();" class="js-reset-btn">Reset Score</button>
+
+    <p>Your Move: <span class="js-userMove"> - </span></p>
+
+    <p>Computer Move: <span class="js-compMove"> - </span></p>
+
+    <p>Result: <span class="js-result"> - </span></p>
+
+    <p><span class="js-score"></span></p>
+</body>
+</html>
