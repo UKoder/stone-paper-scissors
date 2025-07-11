@@ -1,7 +1,29 @@
 *{
     background-color: black;
-    box-sizing: border-box;
-    margin: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: white;
+}
+
+button{
+    cursor: pointer;
+    border: solid;
+    border-radius: 100px;
+    margin-right: 20px;
+    height: 220px;
+    width: 220px;;
+}
+
+img{
+    height: 210px;
+    width: 210px;
+    border-radius: 50%;
+}
+
+.js-reset-btn{
+    display: block;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 40px;
+    width: 200px;
+    font-size: 15px;
 }
