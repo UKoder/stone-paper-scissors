@@ -13,20 +13,20 @@
     <button onclick="
         let computerMove = pickComputerMove();
         let user=document.querySelector('.js-userMove');
-        user.innerHTML='Stone';
+        user.innerHTML=`<img src='imgs/stone.png' class='js-move-img'>`;
         result('stone',computerMove);"><img src="imgs/stone.png" alt="Stone">
         </button>
 
     <button onclick="
         computerMove = pickComputerMove();
         let user=document.querySelector('.js-userMove');
-        user.innerHTML='Paper';
+        user.innerHTML=`<img src='imgs/paper.png' class='js-move-img'>`
         result('paper', computerMove);"><img src="imgs/paper.png" alt="Paper"></button>
 
     <button onclick="
         computerMove = pickComputerMove();
         let user=document.querySelector('.js-userMove');
-        user.innerHTML='Scissors';
+        user.innerHTML=`<img src='imgs/scissors.png' class='js-move-img'>`
         result('scissors',computerMove);"><img src="imgs/scissors.png" alt="Scissors"></button>
 
     <button onclick = "resetScore();" class="js-reset-btn">Reset Score</button>
@@ -35,7 +35,7 @@
 
     <p>Computer Move: <span class="js-compMove"> - </span></p>
 
-    <p>Result: <span class="js-result"> - </span></p>
+    <h2>Result: <span class="js-result"> - </span></h2>
 
     <p><span class="js-score"></span></p>
 </body>
