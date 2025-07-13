@@ -8,11 +8,11 @@ let score = JSON.parse(localStorage.getItem('score')) ||
 function pickComputerMove(){
     let computerMove=Math.random();
     if (computerMove>=0 && computerMove<(1/3))
-        computerMove='Stone';
+        computerMove='stone';
     else if (computerMove >= (1/3) && computerMove<(2/3))
-        computerMove='Paper';
+        computerMove='paper';
     else
-        computerMove='Scissors';
+        computerMove='scissors';
     let compMove=document.querySelector('.js-compMove');
     compMove.innerHTML = `<img src="imgs/${computerMove.toLowerCase()}.png" alt="${computerMove}" class="js-move-img">`;
     return computerMove;
