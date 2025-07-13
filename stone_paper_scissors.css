@@ -14,8 +14,8 @@ button{
 }
 
 img{
-    height: 140px;
-    width: 140px;
+    height: 120px;
+    width: 120px;
     border-radius: 50%;
 }
 
@@ -33,3 +33,58 @@ img{
     width: 80px;
     border-radius: 50%;
 }
+
+@media (max-width: 537px) {
+    h1{
+        font-size: 1.2rem;
+    }
+    img{
+        height: 60px;
+        width: 60px;
+    }
+    button{
+        height: 100px;
+        width: 100px;
+    }
+    .js-move-img{
+        height: 30px;
+        width: 30px;
+    }
+}
+@media (max-width: 387px) {
+    h1{
+        font-size: 1rem;
+    }
+    img{
+        height: 50px;
+        width: 50px;
+    }
+    button{
+        height: 80px;
+        width: 80px;
+    }
+
+    .js-move-img{
+        height: 30px;
+        width: 30px;
+    }
+}
+@media (max-width: 328px) {
+    h1{
+        font-size: 0.9rem;
+    }
+    img{
+        height: 50px;
+        width: 50px;
+    }
+    button{
+        height: 70px;
+        width: 70px;
+    }
+    .js-move-img{
+        height: 30px;
+        width: 30px;
+    }
+}
+
+
