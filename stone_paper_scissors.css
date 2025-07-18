@@ -1,90 +1,89 @@
-*{
-    background-color: black;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: white;
+* {
+  background-color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
 }
 
-button{
-    cursor: pointer;
-    border: solid;
-    border-radius: 100px;
-    margin-right: 20px;
-    height: 150px;
-    width: 150px;
+button {
+  cursor: pointer;
+  border: solid;
+  border-radius: 100px;
+  margin-right: 20px;
+  height: 150px;
+  width: 150px;
 }
 
-img{
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
+img {
+  height: 120px;
+  width: 120px;
+  border-radius: 50%;
 }
 
-.js-reset-btn{
-    display: block;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    height: 40px;
-    width: 200px;
-    font-size: 15px;
+.js-reset-btn,
+.js-autoPlayBtn {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 40px;
+  width: 200px;
+  font-size: 15px;
 }
 
-.js-move-img{
-    height: 80px;
-    width: 80px;
-    border-radius: 50%;
+.js-move-img {
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
 }
 
 @media (max-width: 537px) {
-    h1{
-        font-size: 1.2rem;
-    }
-    img{
-        height: 60px;
-        width: 60px;
-    }
-    button{
-        height: 100px;
-        width: 100px;
-    }
-    .js-move-img{
-        height: 30px;
-        width: 30px;
-    }
+  h1 {
+    font-size: 1.2rem;
+  }
+  img {
+    height: 60px;
+    width: 60px;
+  }
+  button {
+    height: 100px;
+    width: 100px;
+  }
+  .js-move-img {
+    height: 30px;
+    width: 30px;
+  }
 }
 @media (max-width: 387px) {
-    h1{
-        font-size: 1rem;
-    }
-    img{
-        height: 50px;
-        width: 50px;
-    }
-    button{
-        height: 80px;
-        width: 80px;
-    }
+  h1 {
+    font-size: 1rem;
+  }
+  img {
+    height: 50px;
+    width: 50px;
+  }
+  button {
+    height: 80px;
+    width: 80px;
+  }
 
-    .js-move-img{
-        height: 30px;
-        width: 30px;
-    }
+  .js-move-img {
+    height: 30px;
+    width: 30px;
+  }
 }
 @media (max-width: 328px) {
-    h1{
-        font-size: 0.9rem;
-    }
-    img{
-        height: 50px;
-        width: 50px;
-    }
-    button{
-        height: 70px;
-        width: 70px;
-    }
-    .js-move-img{
-        height: 30px;
-        width: 30px;
-    }
+  h1 {
+    font-size: 0.9rem;
+  }
+  img {
+    height: 50px;
+    width: 50px;
+  }
+  button {
+    height: 70px;
+    width: 70px;
+  }
+  .js-move-img {
+    height: 30px;
+    width: 30px;
+  }
 }
-
-

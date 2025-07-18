@@ -1,42 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stone Paper Scissors</title>
-    <link rel="stylesheet" href="stone_paper_scissors.css">
+    <link rel="stylesheet" href="stone_paper_scissors.css" />
     <script src="stone_paper_scissors.js" defer></script>
-</head>
-<body>
+  </head>
+  <body>
     <h1>STONE PAPER SCISSORS</h1>
 
-    <button onclick="
+    <button
+      onclick="
         let computerMove = pickComputerMove();
         let user=document.querySelector('.js-userMove');
         user.innerHTML=`<img src='imgs/stone.png' class='js-move-img'>`;
-        result('stone',computerMove);">
-        <img src="imgs/stone.png" alt="Stone">
+        result('stone',computerMove);"
+    >
+      <img src="imgs/stone.png" alt="Stone" />
     </button>
 
-    <button onclick="
+    <button
+      onclick="
         computerMove = pickComputerMove();
         let user=document.querySelector('.js-userMove');
         user.innerHTML=`<img src='imgs/paper.png' class='js-move-img'>`
-        result('paper', computerMove);">
-        <img src="imgs/paper.png" alt="Paper">
+        result('paper', computerMove);"
+    >
+      <img src="imgs/paper.png" alt="Paper" />
     </button>
 
-    <button onclick="
+    <button
+      onclick="
         computerMove = pickComputerMove();
         let user=document.querySelector('.js-userMove');
         user.innerHTML=`<img src='imgs/scissors.png' class='js-move-img'>`
-        result('scissors',computerMove);">
-        <img src="imgs/scissors.png" alt="Scissors">
+        result('scissors',computerMove);"
+    >
+      <img src="imgs/scissors.png" alt="Scissors" />
     </button>
 
-    <button onclick = "resetScore();" class="js-reset-btn">
-        Reset Score
-    </button>
+    <button onclick="resetScore();" class="js-reset-btn">Reset Score</button>
+
+    <button class="js-autoPlayBtn" onclick="autoPlay();">Auto - Play</button>
 
     <p>Your Move: <span class="js-userMove"> - </span></p>
 
@@ -45,5 +51,5 @@
     <h2>Result: <span class="js-result"> - </span></h2>
 
     <p><span class="js-score"></span></p>
-</body>
+  </body>
 </html>
