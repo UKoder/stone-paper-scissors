@@ -71,7 +71,7 @@ play = false;
 function autoPlay() {
   if (!play) {
     document.querySelector(".js-autoPlayBtn").innerHTML = "Stop Play";
-    intervalID = setInterval(function () {
+    intervalID = setInterval(() => {
       let comp1 = pickComputerMove();
       let comp2 = pickComputerMove();
       result(comp1, comp2);
