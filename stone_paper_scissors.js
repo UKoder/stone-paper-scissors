@@ -4,6 +4,54 @@ let score = JSON.parse(localStorage.getItem("score")) || {
   ties: 0,
 };
 
+document.body.addEventListener("keydown", (event) => {
+  if (event.key === "r") {
+    let computerMove = pickComputerMove();
+    let user = document.querySelector(".js-userMove");
+    user.innerHTML = `<img src='imgs/stone.png' class='js-move-img'>`;
+    result("stone", computerMove);
+  } else if (event.key === "p") {
+    let computerMove = pickComputerMove();
+    let user = document.querySelector(".js-userMove");
+    user.innerHTML = `<img src='imgs/paper.png' class='js-move-img'>`;
+    result("paper", computerMove);
+  } else {
+    let computerMove = pickComputerMove();
+    let user = document.querySelector(".js-userMove");
+    user.innerHTML = `<img src='imgs/scissors.png' class='js-move-img'>`;
+    result("scissors", computerMove);
+  }
+});
+
+document.querySelector(".js-user-stone").addEventListener("click", () => {
+  let computerMove = pickComputerMove();
+  let user = document.querySelector(".js-userMove");
+  user.innerHTML = `<img src='imgs/stone.png' class='js-move-img'>`;
+  result("stone", computerMove);
+});
+
+document.querySelector(".js-user-paper").addEventListener("click", () => {
+  let computerMove = pickComputerMove();
+  let user = document.querySelector(".js-userMove");
+  user.innerHTML = `<img src='imgs/paper.png' class='js-move-img'>`;
+  result("paper", computerMove);
+});
+
+document.querySelector(".js-user-scissors").addEventListener("click", () => {
+  let computerMove = pickComputerMove();
+  let user = document.querySelector(".js-userMove");
+  user.innerHTML = `<img src='imgs/scissors.png' class='js-move-img'>`;
+  result("scissors", computerMove);
+});
+
+document.querySelector(".js-reset-btn").addEventListener("click", () => {
+  resetScore();
+});
+
+document.querySelector(".js-autoPlayBtn").addEventListener("click", () => {
+  autoPlay();
+});
+
 function pickComputerMove() {
   let computerMove = Math.random();
   if (computerMove >= 0 && computerMove < 1 / 3) computerMove = "stone";

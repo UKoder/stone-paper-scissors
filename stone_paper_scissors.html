@@ -9,40 +9,27 @@
   </head>
   <body>
     <h1>STONE PAPER SCISSORS</h1>
-
-    <button
-      onclick="
-        let computerMove = pickComputerMove();
-        let user=document.querySelector('.js-userMove');
-        user.innerHTML=`<img src='imgs/stone.png' class='js-move-img'>`;
-        result('stone',computerMove);"
-    >
+    <p>--Instructions--</p>
+    <br />
+    <p>--Press 'r' for stone</p>
+    <p>--Press 'p' for paper</p>
+    <p>--Press 's' for scissors</p>
+    <br /><br />
+    <button class="js-user-stone">
       <img src="imgs/stone.png" alt="Stone" />
     </button>
 
-    <button
-      onclick="
-        computerMove = pickComputerMove();
-        let user=document.querySelector('.js-userMove');
-        user.innerHTML=`<img src='imgs/paper.png' class='js-move-img'>`
-        result('paper', computerMove);"
-    >
+    <button class="js-user-paper">
       <img src="imgs/paper.png" alt="Paper" />
     </button>
 
-    <button
-      onclick="
-        computerMove = pickComputerMove();
-        let user=document.querySelector('.js-userMove');
-        user.innerHTML=`<img src='imgs/scissors.png' class='js-move-img'>`
-        result('scissors',computerMove);"
-    >
+    <button class="js-user-scissors">
       <img src="imgs/scissors.png" alt="Scissors" />
     </button>
 
-    <button onclick="resetScore();" class="js-reset-btn">Reset Score</button>
+    <button class="js-reset-btn">Reset Score</button>
 
-    <button class="js-autoPlayBtn" onclick="autoPlay();">Auto - Play</button>
+    <button class="js-autoPlayBtn">Auto - Play</button>
 
     <p>Your Move: <span class="js-userMove"> - </span></p>
 
