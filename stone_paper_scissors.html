@@ -14,20 +14,29 @@
     <p>--Press 'r' for stone</p>
     <p>--Press 'p' for paper</p>
     <p>--Press 's' for scissors</p>
+    <p>--Press 'a' to Auto-Play</p>
+    <p>--Press 'Backspace' to reset the score</p>
     <br /><br />
-    <button class="js-user-stone">
-      <img src="imgs/stone.png" alt="Stone" />
-    </button>
+    <div class="move-btns">
+      <button class="js-user-stone">
+        <img src="imgs/stone.png" alt="Stone" class="moves-img" />
+      </button>
 
-    <button class="js-user-paper">
-      <img src="imgs/paper.png" alt="Paper" />
-    </button>
+      <button class="js-user-paper">
+        <img src="imgs/paper.png" alt="Paper" class="moves-img" />
+      </button>
 
-    <button class="js-user-scissors">
-      <img src="imgs/scissors.png" alt="Scissors" />
-    </button>
+      <button class="js-user-scissors">
+        <img src="imgs/scissors.png" alt="Scissors" class="moves-img" />
+      </button>
+    </div>
 
     <button class="js-reset-btn">Reset Score</button>
+
+    <p class="js-confirm hidden">
+      Are You sure <button class="js-confirm-yes">Yes</button>
+      <button class="js-confirm-no">No</button>
+    </p>
 
     <button class="js-autoPlayBtn">Auto - Play</button>
 

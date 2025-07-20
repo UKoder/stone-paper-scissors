@@ -4,53 +4,50 @@ let score = JSON.parse(localStorage.getItem("score")) || {
   ties: 0,
 };
 
+document.querySelector(
+  ".js-score"
+).innerHTML = `Wins: ${score.wins}, Losses: ${score.losses}, Ties: ${score.ties}`;
+
 document.body.addEventListener("keydown", (event) => {
   if (event.key === "r") {
-    let computerMove = pickComputerMove();
-    let user = document.querySelector(".js-userMove");
-    user.innerHTML = `<img src='imgs/stone.png' class='js-move-img'>`;
-    result("stone", computerMove);
+    play("stone");
   } else if (event.key === "p") {
-    let computerMove = pickComputerMove();
-    let user = document.querySelector(".js-userMove");
-    user.innerHTML = `<img src='imgs/paper.png' class='js-move-img'>`;
-    result("paper", computerMove);
-  } else {
-    let computerMove = pickComputerMove();
-    let user = document.querySelector(".js-userMove");
-    user.innerHTML = `<img src='imgs/scissors.png' class='js-move-img'>`;
-    result("scissors", computerMove);
+    play("paper");
+  } else if (event.key === "s") {
+    play("scissors");
+  } else if (event.key === "Backspace") {
+    confirm();
+  } else if (event.key === "a") {
+    autoPlay();
   }
 });
 
 document.querySelector(".js-user-stone").addEventListener("click", () => {
-  let computerMove = pickComputerMove();
-  let user = document.querySelector(".js-userMove");
-  user.innerHTML = `<img src='imgs/stone.png' class='js-move-img'>`;
-  result("stone", computerMove);
+  play("stone");
 });
 
 document.querySelector(".js-user-paper").addEventListener("click", () => {
-  let computerMove = pickComputerMove();
-  let user = document.querySelector(".js-userMove");
-  user.innerHTML = `<img src='imgs/paper.png' class='js-move-img'>`;
-  result("paper", computerMove);
+  play("paper");
 });
 
 document.querySelector(".js-user-scissors").addEventListener("click", () => {
-  let computerMove = pickComputerMove();
-  let user = document.querySelector(".js-userMove");
-  user.innerHTML = `<img src='imgs/scissors.png' class='js-move-img'>`;
-  result("scissors", computerMove);
+  play("scissors");
 });
 
 document.querySelector(".js-reset-btn").addEventListener("click", () => {
-  resetScore();
+  confirm();
 });
 
 document.querySelector(".js-autoPlayBtn").addEventListener("click", () => {
   autoPlay();
 });
+
+function play(userMove) {
+  let user = document.querySelector(".js-userMove");
+  user.innerHTML = `<img src='imgs/${userMove}.png' class='js-move-img'>`;
+  let computerMove = pickComputerMove();
+  result(userMove, computerMove);
+}
 
 function pickComputerMove() {
   let computerMove = Math.random();
@@ -62,7 +59,9 @@ function pickComputerMove() {
   compMove.innerHTML = `<img src="imgs/${computerMove.toLowerCase()}.png" alt="${computerMove}" class="js-move-img">`;
   return computerMove;
 }
+
 let finalResult = document.querySelector(".js-result");
+
 function result(userMove, computerMove) {
   if (computerMove === "stone") {
     if (userMove === "stone") {
@@ -115,9 +114,9 @@ function resetScore() {
   document.querySelector(".js-result").innerHTML = "-";
 }
 
-play = false;
+let isAutoPlay = false;
 function autoPlay() {
-  if (!play) {
+  if (!isAutoPlay) {
     document.querySelector(".js-autoPlayBtn").innerHTML = "Stop Play";
     intervalID = setInterval(() => {
       let comp1 = pickComputerMove();
@@ -126,10 +125,33 @@ function autoPlay() {
       let autoplayComp = document.querySelector(".js-userMove");
       autoplayComp.innerHTML = `<img src='imgs/${comp1}.png' class='js-move-img'>`;
     }, 1000);
-    play = true;
+    isAutoPlay = true;
   } else {
     document.querySelector(".js-autoPlayBtn").innerHTML = "Auto Play";
     clearInterval(intervalID);
-    play = false;
+    isAutoPlay = false;
   }
+}
+
+function confirm() {
+  let confirmBox = document.querySelector(".js-confirm");
+  confirmBox.classList.remove("hidden");
+  document.querySelector(".js-confirm-yes").addEventListener("click", () => {
+    resetScore();
+    confirmBox.classList.add("hidden");
+  });
+  document.querySelector("body").addEventListener("keydown", (event) => {
+    if (event.key === "y") {
+      resetScore();
+      confirmBox.classList.add("hidden");
+    }
+  });
+  document.querySelector(".js-confirm-no").addEventListener("click", () => {
+    confirmBox.classList.add("hidden");
+  });
+  document.querySelector("body").addEventListener("keydown", (event) => {
+    if (event.key === "n") {
+      confirmBox.classList.add("hidden");
+    }
+  });
 }

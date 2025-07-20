@@ -4,13 +4,23 @@
   color: white;
 }
 
-button {
+.js-user-stone,
+.js-user-paper,
+.js-user-scissors {
   cursor: pointer;
   border: solid;
   border-radius: 100px;
   margin-right: 20px;
   height: 150px;
   width: 150px;
+}
+
+.moves-img:hover,
+.js-user-paper:hover,
+.js-user-scissors:hover,
+.js-user-stone:hover {
+  background-color: white;
+  transition: 0.25s;
 }
 
 img {
@@ -21,12 +31,37 @@ img {
 
 .js-reset-btn,
 .js-autoPlayBtn {
-  display: block;
   margin-top: 50px;
   margin-bottom: 50px;
   height: 40px;
   width: 200px;
   font-size: 15px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.js-reset-btn:hover,
+.js-autoPlayBtn:hover {
+  background-color: white;
+  color: black;
+  transition: 0.5s;
+}
+
+.js-confirm-yes,
+.js-confirm-no {
+  padding: 5px;
+  margin: 5px;
+  cursor: pointer;
+  border: 2px solid white;
+}
+.js-confirm-yes:hover,
+.js-confirm-no:hover {
+  background-color: white;
+  color: black;
+  transition: 0.2s;
+}
+.hidden {
+  display: none;
 }
 
 .js-move-img {
