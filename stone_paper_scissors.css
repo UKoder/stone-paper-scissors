@@ -13,6 +13,7 @@
   margin-right: 20px;
   height: 150px;
   width: 150px;
+  margin-left: 10px;
 }
 
 .moves-img:hover,
@@ -20,19 +21,23 @@
 .js-user-scissors:hover,
 .js-user-stone:hover {
   background-color: white;
+  transform: scale(1.2);
   transition: 0.25s;
 }
 
 img {
-  height: 120px;
-  width: 120px;
+  height: 110px;
+  width: 110px;
   border-radius: 50%;
 }
 
 .js-reset-btn,
 .js-autoPlayBtn {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  /* margin-top: 50px;
+  margin-bottom: 40px;
+  margin-right: 20px;
+  margin-left: 10px; */
+  margin: 50px 20px 40px 10px;
   height: 40px;
   width: 200px;
   font-size: 15px;
@@ -44,6 +49,7 @@ img {
 .js-autoPlayBtn:hover {
   background-color: white;
   color: black;
+  transform: scale(1.1);
   transition: 0.5s;
 }
 
@@ -58,6 +64,7 @@ img {
 .js-confirm-no:hover {
   background-color: white;
   color: black;
+  transform: scale(1.1);
   transition: 0.2s;
 }
 .hidden {
@@ -70,42 +77,69 @@ img {
   border-radius: 50%;
 }
 
-@media (max-width: 537px) {
+@media (max-width: 567px) {
   h1 {
     font-size: 1.2rem;
+  }
+  img {
+    height: 90px;
+    width: 90px;
+  }
+  .js-user-paper,
+  .js-user-scissors,
+  .js-user-stone {
+    height: 120px;
+    width: 120px;
+  }
+  .js-move-img {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media (max-width: 482px) {
+  h1 {
+    font-size: 1rem;
+  }
+  img {
+    height: 70px;
+    width: 70px;
+  }
+  .js-user-paper,
+  .js-user-scissors,
+  .js-user-stone {
+    height: 100px;
+    width: 100px;
+  }
+  .js-reset-btn,
+  .js-autoPlayBtn {
+    height: 50px;
+    width: 150px;
+  }
+  .js-move-img {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media (max-width: 417px) {
+  h1 {
+    font-size: 0.9rem;
   }
   img {
     height: 60px;
     width: 60px;
   }
-  button {
-    height: 100px;
-    width: 100px;
-  }
-  .js-move-img {
-    height: 30px;
-    width: 30px;
-  }
-}
-@media (max-width: 387px) {
-  h1 {
-    font-size: 1rem;
-  }
-  img {
-    height: 50px;
-    width: 50px;
-  }
-  button {
+  .js-user-paper,
+  .js-user-scissors,
+  .js-user-stone {
     height: 80px;
     width: 80px;
   }
-
   .js-move-img {
     height: 30px;
     width: 30px;
   }
 }
-@media (max-width: 328px) {
+@media (max-width: 382px) {
   h1 {
     font-size: 0.9rem;
   }
@@ -113,9 +147,66 @@ img {
     height: 50px;
     width: 50px;
   }
-  button {
+  .js-user-paper,
+  .js-user-scissors,
+  .js-user-stone {
     height: 70px;
     width: 70px;
+  }
+  .js-reset-btn,
+  .js-autoPlayBtn {
+    height: 50px;
+    width: 120px;
+  }
+  .js-move-img {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media (max-width: 382px) {
+  h1 {
+    font-size: 0.9rem;
+  }
+  img {
+    height: 40px;
+    width: 40px;
+  }
+  .js-user-paper,
+  .js-user-scissors,
+  .js-user-stone {
+    height: 60px;
+    width: 60px;
+  }
+  .js-reset-btn,
+  .js-autoPlayBtn {
+    height: 50px;
+    width: 100px;
+    font-size: 10px;
+  }
+  .js-move-img {
+    height: 30px;
+    width: 30px;
+  }
+}
+@media (max-width: 297px) {
+  h1 {
+    font-size: 0.9rem;
+  }
+  img {
+    height: 35px;
+    width: 35px;
+  }
+  .js-user-paper,
+  .js-user-scissors,
+  .js-user-stone {
+    height: 50px;
+    width: 50px;
+  }
+  .js-reset-btn,
+  .js-autoPlayBtn {
+    height: 50px;
+    width: 80px;
+    font-size: 10px;
   }
   .js-move-img {
     height: 30px;
